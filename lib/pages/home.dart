@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:trivia_app/models/trivia-user.dart';
 import 'package:trivia_app/pages/coming-soon.dart';
-import 'package:trivia_app/pages/create-a-quiz/quiz-create.dart';
+import 'package:trivia_app/pages/create-a-quiz/quiz-create-settings.dart';
 import 'package:trivia_app/theme/theme.dart';
 
 class Home extends StatelessWidget {
@@ -99,7 +99,7 @@ class Home extends StatelessWidget {
                     Navigator.push(
                       context,
                       CupertinoPageRoute(
-                        builder: (BuildContext context) => QuizCreate(),
+                        builder: (BuildContext context) => QuizCreateSettings(),
                       ),
                     );
                   },

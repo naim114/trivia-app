@@ -20,6 +20,9 @@ class Quiz {
   @HiveField(5)
   bool isRandom;
 
+  @HiveField(6)
+  String difficulty;
+
   // List shuffle(List items) {
   //   var random = new Random();
 
@@ -44,5 +47,6 @@ class Quiz {
     required this.user,
     required this.score,
     required this.isRandom,
+    required this.difficulty,
   });
 }
