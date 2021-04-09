@@ -2,11 +2,10 @@ import 'package:animated_button/animated_button.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:trivia_app/pages/login.dart';
 import 'package:trivia_app/theme/theme.dart';
-import 'package:trivia_app/widgets/button-simple.dart';
-import 'package:trivia_app/widgets/input.dart';
 
 import 'home.dart';
 
@@ -76,17 +75,20 @@ class Onboarding extends StatelessWidget {
                         textAlign: TextAlign.center,
                       ),
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          // PageTransition(
-                          //   type: PageTransitionType.leftToRight,
-                          //   child: Login(),
-                          //   // builder: (BuildContext context) => Login(),
-                          // ),
-                          CupertinoPageRoute(
-                            builder: (BuildContext context) => Login(),
-                          ),
-                        );
+                        // Navigator.push(
+                        //   context,
+                        //   // PageTransition(
+                        //   //   type: PageTransitionType.leftToRight,
+                        //   //   child: Login(),
+                        //   //   // builder: (BuildContext context) => Login(),
+                        //   // ),
+                        //   CupertinoPageRoute(
+                        //     builder: (BuildContext context) => Login(),
+                        //   ),
+                        // );
+                        Fluttertoast.showToast(
+                            msg:
+                                "Creating an account is unavailable right now");
                       },
                     ),
                   ),

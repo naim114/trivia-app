@@ -1,13 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
 import 'package:trivia_app/pages/register.dart';
 import 'package:trivia_app/theme/theme.dart';
 import 'package:trivia_app/widgets/button-simple.dart';
 import 'package:trivia_app/widgets/input.dart';
-
-import 'onboarding.dart';
 
 class Login extends StatelessWidget {
   @override

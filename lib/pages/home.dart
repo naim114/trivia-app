@@ -1,9 +1,10 @@
 import 'package:animated_button/animated_button.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import 'package:trivia_app/models/trivia-user.dart';
 import 'package:trivia_app/pages/coming-soon.dart';
+import 'package:trivia_app/pages/create-a-quiz/quiz-create.dart';
 import 'package:trivia_app/theme/theme.dart';
 
 class Home extends StatelessWidget {
@@ -73,7 +74,7 @@ class Home extends StatelessWidget {
                   color: AppTheme.white,
                   width: size.width * 0.8,
                   child: Text(
-                    'Answer A Quiz',
+                    'Answer a Quiz',
                     style: TextStyle(
                       color: AppTheme.bgColorScreen,
                       fontWeight: FontWeight.bold,
@@ -88,13 +89,20 @@ class Home extends StatelessWidget {
                   color: AppTheme.white,
                   width: size.width * 0.8,
                   child: Text(
-                    'Create A Quiz',
+                    'Create a Quiz',
                     style: TextStyle(
                       color: AppTheme.bgColorScreen,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      CupertinoPageRoute(
+                        builder: (BuildContext context) => QuizCreate(),
+                      ),
+                    );
+                  },
                 ),
               ),
               Padding(
@@ -110,16 +118,18 @@ class Home extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      CupertinoPageRoute(
-                        builder: (BuildContext context) => ComingSoon(),
-                      ),
-                      // PageTransition(
-                      //   type: PageTransitionType.rightToLeft,
-                      //   child: ComingSoon(),
-                      // ),
-                    );
+                    // Navigator.push(
+                    //   context,
+                    //   CupertinoPageRoute(
+                    //     builder: (BuildContext context) => ComingSoon(),
+                    //   ),
+                    //   // PageTransition(
+                    //   //   type: PageTransitionType.rightToLeft,
+                    //   //   child: ComingSoon(),
+                    //   // ),
+                    // );
+                    Fluttertoast.showToast(
+                        msg: "Creating an account is unavailable right now");
                   },
                 ),
               ),
