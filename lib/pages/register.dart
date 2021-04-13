@@ -103,6 +103,7 @@ class Register extends StatelessWidget {
                                           child: ButtonSimple(
                                             text: "Confirm Registration",
                                             buttonColor: AppTheme.bgColorScreen,
+                                            onPressed: () {},
                                           ),
                                         ),
                                         Padding(

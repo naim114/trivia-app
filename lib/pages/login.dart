@@ -114,6 +114,7 @@ class Login extends StatelessWidget {
                                           child: ButtonSimple(
                                             text: "Log In",
                                             buttonColor: AppTheme.bgColorScreen,
+                                            onPressed: () {},
                                           ),
                                         ),
                                         Padding(

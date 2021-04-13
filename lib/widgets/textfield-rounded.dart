@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:trivia_app/theme/theme.dart';
 
 class TextFieldRounded extends StatelessWidget {
@@ -12,7 +13,7 @@ class TextFieldRounded extends StatelessWidget {
   final Color fillColor;
   final TextInputType keyboardType;
   final TextEditingController? controller;
-
+  final List<TextInputFormatter>? inputFormatters;
   const TextFieldRounded({
     Key? key,
     this.textAlign = TextAlign.center,
@@ -26,6 +27,7 @@ class TextFieldRounded extends StatelessWidget {
     this.fillColor = AppTheme.white,
     this.keyboardType = TextInputType.text,
     this.controller,
+    this.inputFormatters,
   }) : super(key: key);
 
   @override
@@ -48,6 +50,7 @@ class TextFieldRounded extends StatelessWidget {
         fillColor: fillColor,
       ),
       controller: controller,
+      inputFormatters: inputFormatters,
     );
   }
 }

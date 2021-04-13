@@ -4,11 +4,13 @@ import 'package:trivia_app/theme/theme.dart';
 class ButtonSimple extends StatelessWidget {
   final String text;
   final Color textColor, buttonColor;
+  final void Function() onPressed;
   const ButtonSimple({
     Key? key,
     required this.text,
     this.textColor = AppTheme.white,
     this.buttonColor = AppTheme.secondary,
+    required this.onPressed,
   }) : super(key: key);
 
   @override
@@ -23,7 +25,7 @@ class ButtonSimple extends StatelessWidget {
           borderRadius: BorderRadius.circular(4.0),
         ),
       ),
-      onPressed: () {},
+      onPressed: onPressed,
       child: Padding(
         padding: EdgeInsets.only(
           left: 16.0,

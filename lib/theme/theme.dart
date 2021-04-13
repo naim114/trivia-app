@@ -16,7 +16,9 @@ class AppTheme {
 
   static const Color primary = Color.fromRGBO(205, 132, 241, 1.0);
 
-  static const Color secondary = Color.fromRGBO(255, 204, 204, 1.0);
+  static const Color secondary = Color.fromRGBO(241, 132, 223, 1.0);
+
+  static const Color third = Color.fromRGBO(150, 132, 241, 1.0);
 
   static const Color label = Color.fromRGBO(254, 36, 114, 1.0);
 
