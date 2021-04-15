@@ -5,7 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:trivia_app/pages/create-a-quiz/quiz-create-questions.dart';
+import 'package:trivia_app/pages/create-a-quiz/quiz-create-a-question.dart';
+import 'package:trivia_app/pages/create-a-quiz/quiz-create-question-setup.dart';
 import 'package:trivia_app/theme/theme.dart';
 import 'package:trivia_app/widgets/textfield-rounded.dart';
 import 'package:dropdown_search/dropdown_search.dart';
@@ -267,23 +268,26 @@ class _QuizCreateSettingsState extends State<QuizCreateSettings> {
                       isRandom = false;
                     }
 
-                    Map<String, dynamic> dataMap = {
+                    Map<String, dynamic> dataSettingsMap = {
                       "title": contTitle.text,
                       "category": dropdownCategory,
                       "isRandom": isRandom,
                       "difficulty": dropdownDifficulty,
-                      "questionNum": contQNum.text,
+                      "questionNum": int.parse(contQNum.text),
                     };
 
-                    print("===> ===> ===> ===> DATA MAP ==> ===> ===> ===>");
-                    print(dataMap);
-                    print("===> ===> ===> ===> DATA MAP ==> ===> ===> ===>");
+                    print("===> ===> ===> DATA SETTINGS MAP ===> ===> ===>");
+                    print(dataSettingsMap);
+                    print("===> ===> ===> DATA SETTINGS MAP ===> ===> ===>");
 
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (BuildContext context) =>
-                            QuizCreateQuestions(dataMap: dataMap),
+                            QuizCreateQuestionSetup(
+                          dataSettingsMap: dataSettingsMap,
+                          questionNum: int.parse(contQNum.text),
+                        ),
                       ),
                     );
                   }

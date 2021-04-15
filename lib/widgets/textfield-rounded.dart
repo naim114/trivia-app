@@ -4,7 +4,7 @@ import 'package:trivia_app/theme/theme.dart';
 
 class TextFieldRounded extends StatelessWidget {
   final TextAlign textAlign;
-  final String? hintText;
+  final String? hintText, initialValue;
   final TextStyle textStyle;
   final double circularRadius, borderWidth;
   final BorderStyle borderStyle;
@@ -14,6 +14,8 @@ class TextFieldRounded extends StatelessWidget {
   final TextInputType keyboardType;
   final TextEditingController? controller;
   final List<TextInputFormatter>? inputFormatters;
+  final bool enabled;
+
   const TextFieldRounded({
     Key? key,
     this.textAlign = TextAlign.center,
@@ -28,12 +30,16 @@ class TextFieldRounded extends StatelessWidget {
     this.keyboardType = TextInputType.text,
     this.controller,
     this.inputFormatters,
+    this.enabled = true,
+    this.initialValue,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      initialValue: initialValue,
       textAlign: textAlign,
+      enabled: enabled,
       keyboardType: keyboardType,
       decoration: InputDecoration(
         hintText: hintText,
