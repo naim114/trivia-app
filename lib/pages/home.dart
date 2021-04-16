@@ -71,12 +71,12 @@ class Home extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: AnimatedButton(
-                  color: AppTheme.white,
+                  color: AppTheme.secondary,
                   width: size.width * 0.8,
                   child: Text(
                     'Answer a Quiz',
                     style: TextStyle(
-                      color: AppTheme.bgColorScreen,
+                      color: AppTheme.white,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -86,12 +86,12 @@ class Home extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: AnimatedButton(
-                  color: AppTheme.white,
+                  color: AppTheme.secondary,
                   width: size.width * 0.8,
                   child: Text(
                     'Create a Quiz',
                     style: TextStyle(
-                      color: AppTheme.bgColorScreen,
+                      color: AppTheme.white,
                       fontWeight: FontWeight.bold,
                     ),
                   ),

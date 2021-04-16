@@ -1,8 +1,10 @@
+import 'package:animated_button/animated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:material_dialogs/material_dialogs.dart';
 import 'package:material_dialogs/widgets/buttons/icon_button.dart';
 import 'package:material_dialogs/widgets/buttons/icon_outline_button.dart';
+import 'package:trivia_app/pages/create-a-quiz/quiz-create-a-question-finalize.dart';
 import 'package:trivia_app/theme/theme.dart';
 import 'package:trivia_app/widgets/textfield-rounded.dart';
 
@@ -31,6 +33,7 @@ class _QuizCreateReviewState extends State<QuizCreateReview> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     List<Map<String, Map<String, bool>>> questionSetList =
         widget.dataMap["questions"];
     print("questionSetList: $questionSetList");
@@ -165,19 +168,19 @@ class _QuizCreateReviewState extends State<QuizCreateReview> {
                   children: List.generate(
                     questionSetList.length,
                     (index) {
-                      // List<Map<String, Map<String, bool>>> questionSetList =
-                      //     widget.dataMap["questions"];
                       Map<String, Map<String, bool>> questionSet =
                           questionSetList[index];
                       String question = questionSet.keys.elementAt(0);
                       Map<String, bool> ansMap = questionSet.values.first;
+                      List<String> ansList = ansMap.keys.toList();
+                      ansList.join('x\n');
+                      String ansListString =
+                          ansList.map((val) => val.trim()).join('\n');
+
                       print("questionSet: $questionSet");
                       print("firstkey: ${questionSet.keys.elementAt(0)}");
-                      List<String> ansList = ansMap.keys.toList();
-                      ansList.forEach((element) {
-                        element = element + "\n";
-                      });
-                      print("ansList: $ansList");
+                      print("ansList: $ansListString");
+
                       return Slidable(
                         actionPane: SlidableDrawerActionPane(),
                         actionExtentRatio: 0.25,
@@ -199,8 +202,7 @@ class _QuizCreateReviewState extends State<QuizCreateReview> {
                             icon: Icons.more_horiz,
                             onTap: () => Dialogs.bottomMaterialDialog(
                               title: question,
-                              msg: ansList
-                                  .toString(), //TODO display answer list heere!
+                              msg: ansListString,
                               color: Colors.white,
                               context: context,
                               actions: [
@@ -217,6 +219,36 @@ class _QuizCreateReviewState extends State<QuizCreateReview> {
                             ),
                           ),
                         ],
+                      );
+                    },
+                  ),
+                ),
+              ),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: AnimatedButton(
+                    color: AppTheme.secondary,
+                    width: size.width * 0.9,
+                    child: Text(
+                      'Submit',
+                      style: TextStyle(
+                        color: AppTheme.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    onPressed: () {
+                      print("===> ===> ===> ===> DATA MAP ==> ===> ===> ===>");
+                      print("dataMap: ${widget.dataMap}");
+                      print("===> ===> ===> ===> DATA MAP ==> ===> ===> ===>");
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              QuizCreateQuestionFinalize(
+                            dataMap: widget.dataMap,
+                          ),
+                        ),
                       );
                     },
                   ),

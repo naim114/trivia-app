@@ -243,12 +243,12 @@ class _QuizCreateSettingsState extends State<QuizCreateSettings> {
             child: Padding(
               padding: const EdgeInsets.symmetric(vertical: 20),
               child: AnimatedButton(
-                color: AppTheme.white,
-                width: size.width * 0.8,
+                color: AppTheme.secondary,
+                width: size.width * 0.9,
                 child: Text(
                   'Continue',
                   style: TextStyle(
-                    color: AppTheme.bgColorScreen,
+                    color: AppTheme.white,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
