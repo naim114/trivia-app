@@ -4,7 +4,7 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:material_dialogs/material_dialogs.dart';
 import 'package:material_dialogs/widgets/buttons/icon_button.dart';
 import 'package:material_dialogs/widgets/buttons/icon_outline_button.dart';
-import 'package:trivia_app/pages/create-a-quiz/quiz-create-a-question-finalize.dart';
+import 'package:trivia_app/pages/create-a-quiz/quiz-create-finalize.dart';
 import 'package:trivia_app/theme/theme.dart';
 import 'package:trivia_app/widgets/textfield-rounded.dart';
 
@@ -41,6 +41,7 @@ class _QuizCreateReviewState extends State<QuizCreateReview> {
       backgroundColor: AppTheme.primary,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         elevation: 0,
         title: Text(
           "Quiz Review",
@@ -173,9 +174,9 @@ class _QuizCreateReviewState extends State<QuizCreateReview> {
                       String question = questionSet.keys.elementAt(0);
                       Map<String, bool> ansMap = questionSet.values.first;
                       List<String> ansList = ansMap.keys.toList();
-                      ansList.join('x\n');
+                      // ansList.join('x\n');
                       String ansListString =
-                          ansList.map((val) => val.trim()).join('\n');
+                          ansList.map((val) => val.trim()).join(',\n');
 
                       print("questionSet: $questionSet");
                       print("firstkey: ${questionSet.keys.elementAt(0)}");
@@ -192,7 +193,7 @@ class _QuizCreateReviewState extends State<QuizCreateReview> {
                               padding: const EdgeInsets.symmetric(vertical: 10),
                               child: Text(question),
                             ),
-                            trailing: Icon(Icons.swipe_rounded),
+                            trailing: Icon(Icons.swipe),
                           ),
                         ),
                         secondaryActions: <Widget>[
@@ -244,8 +245,7 @@ class _QuizCreateReviewState extends State<QuizCreateReview> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (BuildContext context) =>
-                              QuizCreateQuestionFinalize(
+                          builder: (BuildContext context) => QuizCreateFinalize(
                             dataMap: widget.dataMap,
                           ),
                         ),

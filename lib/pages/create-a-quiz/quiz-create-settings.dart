@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:trivia_app/pages/create-a-quiz/quiz-create-a-question.dart';
-import 'package:trivia_app/pages/create-a-quiz/quiz-create-question-setup.dart';
+import 'package:trivia_app/pages/create-a-quiz/quiz-create-setup.dart';
 import 'package:trivia_app/theme/theme.dart';
 import 'package:trivia_app/widgets/textfield-rounded.dart';
 import 'package:dropdown_search/dropdown_search.dart';
@@ -44,6 +44,7 @@ class _QuizCreateSettingsState extends State<QuizCreateSettings> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        centerTitle: true,
         title: Text(
           "Quiz Settings",
           style: TextStyle(
@@ -283,8 +284,7 @@ class _QuizCreateSettingsState extends State<QuizCreateSettings> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) =>
-                            QuizCreateQuestionSetup(
+                        builder: (BuildContext context) => QuizCreateSetup(
                           dataSettingsMap: dataSettingsMap,
                           questionNum: int.parse(contQNum.text),
                         ),

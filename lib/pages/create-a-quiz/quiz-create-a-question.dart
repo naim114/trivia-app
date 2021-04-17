@@ -81,6 +81,7 @@ class _QuizCreateAQuestionState extends State<QuizCreateAQuestion> {
       ),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         elevation: 0,
         title: Text(
           "Quiz Questions #${widget.index + 1}",
