@@ -28,12 +28,17 @@ class _QuizCreateFinalizeState extends State<QuizCreateFinalize> {
   Uint8List? _imageFile;
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     String jsonDataMap = jsonEncode(widget.dataMap);
-    print("xxx xxx xxx xxx JSON DATA MAP ==> xxx xxx xxx");
+    print("xxx xxx xxx xxx JSON DATA MAP xxx xxx xxx xxx");
     print(jsonDataMap);
-    print("xxx xxx xxx xxx JSON DATA MAP ==> xxx xxx xxx");
+    print("xxx xxx xxx xxx JSON DATA MAP xxx xxx xxx xxx");
 
     Widget qrCodeWidget = Center(
       child: Container(
@@ -44,11 +49,6 @@ class _QuizCreateFinalizeState extends State<QuizCreateFinalize> {
           size: size.height * 0.4,
         ),
       ),
-    );
-
-    Widget screenshotWidget = Screenshot(
-      controller: screenshotController,
-      child: qrCodeWidget,
     );
 
     return Scaffold(
@@ -82,11 +82,14 @@ class _QuizCreateFinalizeState extends State<QuizCreateFinalize> {
               //     ),
               //   ),
               // ),
-              qrCodeWidget,
+              Screenshot(
+                controller: screenshotController,
+                child: qrCodeWidget,
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 child: Text(
-                  "Scan this QR Code to answer ${widget.dataMap["title"]}",
+                  "Scan this QR Code to ansswer ${widget.dataMap["title"]}",
                   style: TextStyle(
                     color: AppTheme.white,
                     fontWeight: FontWeight.bold,
@@ -121,21 +124,29 @@ class _QuizCreateFinalizeState extends State<QuizCreateFinalize> {
                       ),
                     ),
                     onPressed: () async {
-                      screenshotController.capture().then((image) {
-                        //Capture Done
+                      // print("_imageFile before: ${_imageFile.toString()}");
+                      screenshotController.capture().then((image) async {
                         setState(() {
                           _imageFile = image;
                         });
-                      }).catchError((onError) {
-                        print(onError);
-                        Fluttertoast.showToast(msg: onError);
-                      });
+                        // print("setState successful");
+                        // print("_imageFile after: $_imageFile");
+                        // print("image: $image");
 
-                      await ImageGallerySaver.saveImage(
-                        _imageFile!,
-                        name:
-                            "${widget.dataMap["title"]} Quiz QR Code by Triviazilla",
-                      );
+                        // var permissionReq =
+                        //     await Permission.mediaLibrary.request().isGranted;
+                        // print("permissionReq : $permissionReq");
+                        // var status = await Permission.storage.status;
+                        // print("permission : $status");
+
+                        final result = await ImageGallerySaver.saveImage(image!,
+                            name:
+                                "${widget.dataMap["title"]}-Triviazilla-QR-Code");
+                        print("result: $result");
+                      }).catchError((onError) {
+                        print("screenController error: $onError");
+                        Fluttertoast.showToast(msg: "Error: $onError");
+                      });
                     },
                   ),
                 ),

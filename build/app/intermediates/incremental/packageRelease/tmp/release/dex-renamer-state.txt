@@ -1,4 +1,0 @@
-#Sat Apr 17 12:11:33 MYT 2021
-base.0=/home/naim114/StudioProjects/Side Project/trivia-app/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
