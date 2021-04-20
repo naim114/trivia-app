@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:trivia_app/pages/create-a-quiz/quiz-create-a-question.dart';
-import 'package:trivia_app/pages/create-a-quiz/quiz-create-setup.dart';
+import 'package:trivia_app/pages/create-a-quiz/quiz-create-frame.dart';
 import 'package:trivia_app/theme/theme.dart';
 import 'package:trivia_app/widgets/textfield-rounded.dart';
 import 'package:dropdown_search/dropdown_search.dart';
@@ -224,7 +224,7 @@ class _QuizCreateSettingsState extends State<QuizCreateSettings> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10),
             child: Text(
-              "Quiz Number",
+              "Number of Question",
               style: TextStyle(
                 color: AppTheme.text,
                 fontWeight: FontWeight.bold,
@@ -284,7 +284,7 @@ class _QuizCreateSettingsState extends State<QuizCreateSettings> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (BuildContext context) => QuizCreateSetup(
+                        builder: (BuildContext context) => QuizCreateFrame(
                           dataSettingsMap: dataSettingsMap,
                           questionNum: int.parse(contQNum.text),
                         ),

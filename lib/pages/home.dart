@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:trivia_app/models/trivia-user.dart';
+import 'package:trivia_app/pages/answer-a-quiz/quiz-answer-settings.dart';
 import 'package:trivia_app/pages/coming-soon.dart';
 import 'package:trivia_app/pages/create-a-quiz/quiz-create-settings.dart';
 import 'package:trivia_app/theme/theme.dart';
@@ -12,7 +13,7 @@ class Home extends StatelessWidget {
 
   const Home({
     Key? key,
-    required this.isUser,
+    this.isUser = false,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -80,7 +81,14 @@ class Home extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => QuizAnswerSettings(),
+                      ),
+                    );
+                  },
                 ),
               ),
               Padding(

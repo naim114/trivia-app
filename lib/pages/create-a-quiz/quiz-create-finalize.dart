@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'dart:typed_data';
 
+import 'package:permission_handler/permission_handler.dart';
+import 'package:trivia_app/pages/home.dart';
 import 'package:trivia_app/theme/theme.dart';
 
 import 'package:animated_button/animated_button.dart';
@@ -43,10 +45,21 @@ class _QuizCreateFinalizeState extends State<QuizCreateFinalize> {
     Widget qrCodeWidget = Center(
       child: Container(
         color: Colors.white,
-        child: QrImage(
-          data: jsonDataMap,
-          version: QrVersions.auto,
-          size: size.height * 0.4,
+        child: Column(
+          children: [
+            QrImage(
+              data: jsonDataMap,
+              version: QrVersions.auto,
+              size: size.height * 0.4,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: Text(
+                "Triviazilla QR Code - ${widget.dataMap["title"]}",
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -89,7 +102,7 @@ class _QuizCreateFinalizeState extends State<QuizCreateFinalize> {
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 child: Text(
-                  "Scan this QR Code to ansswer ${widget.dataMap["title"]}",
+                  "Scan this QR Code to answer ${widget.dataMap["title"]} quiz",
                   style: TextStyle(
                     color: AppTheme.white,
                     fontWeight: FontWeight.bold,
@@ -125,6 +138,9 @@ class _QuizCreateFinalizeState extends State<QuizCreateFinalize> {
                     ),
                     onPressed: () async {
                       // print("_imageFile before: ${_imageFile.toString()}");
+                      Fluttertoast.showToast(
+                          msg:
+                              "Please gave storage permission to Triviazilla by go to your phone Appplication settings and enabled storage permission for Triviazilla");
                       screenshotController.capture().then((image) async {
                         setState(() {
                           _imageFile = image;
@@ -133,9 +149,9 @@ class _QuizCreateFinalizeState extends State<QuizCreateFinalize> {
                         // print("_imageFile after: $_imageFile");
                         // print("image: $image");
 
-                        // var permissionReq =
-                        //     await Permission.mediaLibrary.request().isGranted;
-                        // print("permissionReq : $permissionReq");
+                        var permissionReq =
+                            await Permission.storage.request().isGranted;
+                        print("permissionReq : $permissionReq");
                         // var status = await Permission.storage.status;
                         // print("permission : $status");
 
@@ -143,6 +159,9 @@ class _QuizCreateFinalizeState extends State<QuizCreateFinalize> {
                             name:
                                 "${widget.dataMap["title"]}-Triviazilla-QR-Code");
                         print("result: $result");
+                        Fluttertoast.showToast(
+                            msg:
+                                "QR Code image successfully saved to gallery.");
                       }).catchError((onError) {
                         print("screenController error: $onError");
                         Fluttertoast.showToast(msg: "Error: $onError");
@@ -164,7 +183,14 @@ class _QuizCreateFinalizeState extends State<QuizCreateFinalize> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                          builder: (BuildContext context) => Home(),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ),
