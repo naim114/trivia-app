@@ -56,6 +56,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "bouncing_widget",
+      "rootUri": "file:///Users/mac/development/flutter/.pub-cache/hosted/pub.dartlang.org/bouncing_widget-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "build",
       "rootUri": "file:///Users/mac/development/flutter/.pub-cache/hosted/pub.dartlang.org/build-2.0.0",
       "packageUri": "lib/",
@@ -208,6 +214,12 @@
     {
       "name": "flutter",
       "rootUri": "file:///Users/mac/development/flutter/packages/flutter",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_animated_button",
+      "rootUri": "file:///Users/mac/development/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_animated_button-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -608,7 +620,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-04-20T06:20:52.615257Z",
+  "generated": "2021-04-22T07:19:15.024002Z",
   "generator": "pub",
   "generatorVersion": "2.13.0-222.0.dev"
 }

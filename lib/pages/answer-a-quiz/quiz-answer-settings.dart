@@ -38,7 +38,8 @@ class _QuizAnswerSettingsState extends State<QuizAnswerSettings> {
                 context,
                 MaterialPageRoute(
                   builder: (BuildContext context) => QuizAnswerReview(
-                    qrResult: "",
+                    qrResult:
+                        '{"title":"Math","category":"Education","isRandom":false,"difficulty":"Easy","questionNum":3,"questions":[{"1 + 1":{"2":true,"3":false,"5":false}},{"2 x 2":{"4":true,"10":false,"8":false}},{"10 - 6":{"4":true,"5":false,"1":false}}]}',
                   ),
                 ),
               );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trivia_app/pages/answer-a-quiz/quiz-answer-a-question.dart';
 
 class QuizAnswerFrame extends StatefulWidget {
   final Map<String, dynamic> dataMap;
@@ -23,17 +24,31 @@ class _QuizAnswerFrameState extends State<QuizAnswerFrame> {
 
   @override
   Widget build(BuildContext context) {
+    int questionNum = widget.dataMap["questionNum"];
+    print("${questionNum}: ${widget.dataMap["questionNum"].runtimeType}");
+    List<dynamic> questionsList = widget.dataMap["questions"];
+    print("questionsList: $questionsList");
     return PageView(
       controller: pageController,
-      pageSnapping: false,
-      physics: NeverScrollableScrollPhysics(),
-      children: [
-        Scaffold(
-          body: Center(
-            child: Text("asdasd"),
-          ),
-        ),
-      ],
+      // pageSnapping: false,
+      // physics: NeverScrollableScrollPhysics(),
+      // children: List.generate(
+      //   questionNum,
+      //   (index) => QuizAnswerAQuestion(index: index),
+      // ),
+
+      children: List.generate(
+        questionNum,
+        (index) {
+          // Map<String, Map<String, bool>> aQuestion = questionsList[index];
+          Map<String, dynamic> aQuestion = questionsList[index];
+          print("question #${index + 1}: $aQuestion");
+          return QuizAnswerAQuestion(
+            index: index,
+            questionSet: aQuestion,
+          );
+        },
+      ),
     );
   }
 }
