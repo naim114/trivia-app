@@ -1,5 +1,6 @@
 import 'package:bouncing_widget/bouncing_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:trivia_app/theme/theme.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:trivia_app/widgets/button-bouncing.dart';
@@ -8,11 +9,13 @@ import 'package:trivia_app/widgets/button-simple.dart';
 class QuizAnswerAQuestion extends StatelessWidget {
   final int index;
   final Map<String, dynamic> questionSet;
+  final Function(bool) submitAnswers;
 
   const QuizAnswerAQuestion({
     Key? key,
     required this.index,
     required this.questionSet,
+    required this.submitAnswers,
   }) : super(key: key);
 
   @override
@@ -77,25 +80,17 @@ class QuizAnswerAQuestion extends StatelessWidget {
               ),
             ),
             Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                BouncingButton(
-                  onPressed: () {},
-                  text: 'Tarantula crawl up on me',
+              children: List.generate(
+                answers.length,
+                (index) => BouncingButton(
+                  text: answers[index],
+                  onPressed: () {
+                    Fluttertoast.showToast(
+                        msg: "You've picked ${answers[index]}");
+                    submitAnswers(answersBool[index]);
+                  },
                 ),
-                BouncingButton(
-                  onPressed: () {},
-                  text: 'Tarantula crawl up on me',
-                ),
-                BouncingButton(
-                  onPressed: () {},
-                  text: 'Tarantula crawl up on me',
-                ),
-                BouncingButton(
-                  onPressed: () {},
-                  text: 'Tarantula crawl up on me',
-                ),
-              ],
+              ),
             ),
           ],
         ),
