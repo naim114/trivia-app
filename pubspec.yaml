@@ -43,8 +43,9 @@ dependencies:
   permission_handler: ^6.1.3
   qr_code_scanner: ^0.4.0
   animate_icons: ^2.0.0
-  flutter_animated_button: ^2.0.0
+  # flutter_animated_button: ^2.0.0
   bouncing_widget: ^2.0.0
+  ndialog: ^4.0.1
 
 dev_dependencies:
   flutter_test:

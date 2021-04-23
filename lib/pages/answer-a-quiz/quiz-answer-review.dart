@@ -139,6 +139,24 @@ class _QuizAnswerReviewState extends State<QuizAnswerReview> {
               initialValue: dataMap["difficulty"],
               enabled: false,
             ),
+            //isRandom
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10),
+              child: Text(
+                "Randomize Order",
+                style: TextStyle(
+                  color: AppTheme.text,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                ),
+              ),
+            ),
+            TextFieldRounded(
+              hintText: 'Randomize Order',
+              textAlign: TextAlign.start,
+              initialValue: dataMap["isRandom"] ? 'Yes' : 'No',
+              enabled: false,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 30),
               child: AnimatedButton(

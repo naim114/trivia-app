@@ -1,4 +1,3 @@
-import 'package:animate_icons/animate_icons.dart';
 import 'package:animated_button/animated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:trivia_app/pages/answer-a-quiz/quiz-answer-frame.dart';
@@ -88,7 +87,9 @@ class _QuizAnswerReadyState extends State<QuizAnswerReady> {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.push(
+                    Navigator.of(context).popUntil((route) => route.isFirst);
+
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                         builder: (BuildContext context) => QuizAnswerFrame(

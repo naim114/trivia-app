@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:material_dialogs/material_dialogs.dart';
 import 'package:material_dialogs/widgets/buttons/icon_button.dart';
-import 'package:material_dialogs/widgets/buttons/icon_outline_button.dart';
 import 'package:trivia_app/pages/create-a-quiz/quiz-create-finalize.dart';
 import 'package:trivia_app/theme/theme.dart';
 import 'package:trivia_app/widgets/textfield-rounded.dart';

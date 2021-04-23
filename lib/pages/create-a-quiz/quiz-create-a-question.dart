@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:trivia_app/pages/create-a-quiz/quiz-create-settings.dart';
 import 'package:trivia_app/theme/theme.dart';
 import 'package:trivia_app/widgets/button-simple.dart';
 import 'package:trivia_app/widgets/textfield-rounded.dart';
@@ -56,7 +55,6 @@ class _QuizCreateAQuestionState extends State<QuizCreateAQuestion> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: AppTheme.primary,
       floatingActionButton: FloatingActionButton(

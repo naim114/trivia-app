@@ -2,9 +2,7 @@ import 'package:animated_button/animated_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:trivia_app/models/trivia-user.dart';
 import 'package:trivia_app/pages/answer-a-quiz/quiz-answer-settings.dart';
-import 'package:trivia_app/pages/coming-soon.dart';
 import 'package:trivia_app/pages/create-a-quiz/quiz-create-settings.dart';
 import 'package:trivia_app/theme/theme.dart';
 

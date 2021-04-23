@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:trivia_app/pages/login.dart';
 import 'package:trivia_app/theme/theme.dart';
 
 import 'home.dart';

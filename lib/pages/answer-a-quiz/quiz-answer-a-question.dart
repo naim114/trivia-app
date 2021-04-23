@@ -1,10 +1,7 @@
-import 'package:bouncing_widget/bouncing_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:trivia_app/theme/theme.dart';
-import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:trivia_app/widgets/button-bouncing.dart';
-import 'package:trivia_app/widgets/button-simple.dart';
 
 class QuizAnswerAQuestion extends StatelessWidget {
   final int index;
@@ -56,6 +53,7 @@ class QuizAnswerAQuestion extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
+        automaticallyImplyLeading: false,
         iconTheme: IconThemeData(
           color: AppTheme.white,
         ),

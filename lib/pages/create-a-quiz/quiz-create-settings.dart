@@ -1,15 +1,11 @@
 import 'package:animated_button/animated_button.dart';
-import 'package:direct_select_flutter/direct_select_item.dart';
-import 'package:direct_select_flutter/direct_select_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:trivia_app/pages/create-a-quiz/quiz-create-a-question.dart';
 import 'package:trivia_app/pages/create-a-quiz/quiz-create-frame.dart';
 import 'package:trivia_app/theme/theme.dart';
 import 'package:trivia_app/widgets/textfield-rounded.dart';
-import 'package:dropdown_search/dropdown_search.dart';
 
 class QuizCreateSettings extends StatefulWidget {
   @override
