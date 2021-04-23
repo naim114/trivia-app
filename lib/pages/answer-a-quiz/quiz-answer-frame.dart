@@ -29,12 +29,11 @@ class _QuizAnswerFrameState extends State<QuizAnswerFrame> {
   @override
   Widget build(BuildContext context) {
     int questionNum = widget.dataMap["questionNum"];
-    print("questionNum: ${widget.dataMap["questionNum"].runtimeType}");
+    print("questionNum: ${widget.dataMap["questionNum"]}");
     List<dynamic> questionsList = widget.dataMap["questions"];
     print("questionsList: $questionsList");
     bool isRandom = widget.dataMap["isRandom"];
     print("isRandom: $isRandom");
-
     int score = 0;
 
     List<String> trueGIF = [
@@ -50,7 +49,6 @@ class _QuizAnswerFrameState extends State<QuizAnswerFrame> {
       'https://media.giphy.com/media/5fMlYckytHM4g/giphy.gif',
       'https://media.giphy.com/media/8Odq0zzKM596g/giphy.gif',
     ];
-
     List<String> trueWord = [
       'Correct!',
       'Nice one!',
@@ -61,7 +59,6 @@ class _QuizAnswerFrameState extends State<QuizAnswerFrame> {
       'OH YEAHHH',
       'Hands up 🙌 '
     ];
-
     List<String> falseGIF = [
       'https://media.giphy.com/media/l4pLY0zySvluEvr0c/giphy.gif',
       'https://media.giphy.com/media/ceeN6U57leAhi/giphy.gif',
@@ -74,7 +71,6 @@ class _QuizAnswerFrameState extends State<QuizAnswerFrame> {
       'https://media.giphy.com/media/oQjsQmQKlFDcQ/giphy.gif',
       'https://media.giphy.com/media/l1IY5J4Cfw8JLi40M/giphy.gif',
     ];
-
     List<String> falseWord = [
       'Incorrect',
       'Wrong!!',
@@ -86,6 +82,7 @@ class _QuizAnswerFrameState extends State<QuizAnswerFrame> {
       'False!!'
     ];
 
+    Map<String, bool> answeredQuestion = {};
     return PageView(
       controller: pageController,
       pageSnapping: false,
@@ -108,8 +105,9 @@ class _QuizAnswerFrameState extends State<QuizAnswerFrame> {
               print("Question #${index + 1}: $bool");
 
               if (bool) score++;
-
               print("score: $score");
+
+              answeredQuestion[aQuestion.entries.first.key] = bool;
 
               // pageController.nextPage(
               //   duration: Duration(milliseconds: 777),
@@ -126,6 +124,7 @@ class _QuizAnswerFrameState extends State<QuizAnswerFrame> {
                     builder: (BuildContext context) => QuizAnswerFinish(
                       questionNum: questionNum,
                       score: score,
+                      answeredQuestion: answeredQuestion,
                     ),
                   ),
                 );

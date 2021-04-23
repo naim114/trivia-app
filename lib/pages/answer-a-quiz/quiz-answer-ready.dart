@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:animated_button/animated_button.dart';
 import 'package:flutter/material.dart';
 import 'package:trivia_app/pages/answer-a-quiz/quiz-answer-frame.dart';
@@ -24,6 +26,16 @@ class _QuizAnswerReadyState extends State<QuizAnswerReady> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> listGIF = [
+      'https://media.giphy.com/media/xT39Db8zIOODTppk08/giphy.gif',
+      'https://media.giphy.com/media/LoCDk7fecj2dwCtSB3/giphy.gif',
+      "https://media.giphy.com/media/37QVh74uQ5qeBOh0UF/giphy.gif",
+      'https://media.giphy.com/media/BpGWitbFZflfSUYuZ9/giphy.gif',
+      'https://media.giphy.com/media/MEcU4c9fdUPqqNNU8N/giphy.gif',
+      'https://media.giphy.com/media/9EulAtNWWfY9W/giphy.gif',
+    ];
+    final _random = Random();
+
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: AppTheme.primary,
@@ -49,7 +61,7 @@ class _QuizAnswerReadyState extends State<QuizAnswerReady> {
               Padding(
                 padding: const EdgeInsets.only(bottom: 20),
                 child: Image.network(
-                  "https://media.giphy.com/media/37QVh74uQ5qeBOh0UF/giphy.gif",
+                  listGIF[_random.nextInt(listGIF.length)],
                   width: size.width * 0.7,
                 ),
               ),
