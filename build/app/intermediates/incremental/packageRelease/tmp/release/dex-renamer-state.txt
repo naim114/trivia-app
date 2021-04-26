@@ -1,0 +1,4 @@
+#Mon Apr 26 16:08:45 MYT 2021
+base.0=/Users/mac/AndroidStudioProjects/trivia-app/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

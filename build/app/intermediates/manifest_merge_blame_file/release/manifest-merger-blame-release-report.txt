@@ -1,0 +1,159 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.trivia_app"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="30" />
+9-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+11-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:3:2-78
+11-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:3:19-75
+12    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+12-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:4:2-77
+12-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:4:19-74
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:5:2-62
+13-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:5:19-59
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:6:2-77
+14-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:6:19-74
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:7:2-78
+15-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:7:19-75
+16    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+16-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:8:2-72
+16-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:8:19-69
+17    <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+18    <uses-feature
+18-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:25:5-27:36
+19        android:name="android.hardware.camera"
+19-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:26:9-47
+20        android:required="false" />
+20-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:27:9-33
+21    <uses-feature
+21-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:28:5-30:36
+22        android:name="android.hardware.camera.front"
+22-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:29:9-53
+23        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+23-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:30:9-33
+24    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+25    <uses-feature
+25-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:33:5-35:36
+26        android:name="android.hardware.camera.autofocus"
+26-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:34:9-57
+27        android:required="false" />
+27-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:35:9-33
+28    <uses-feature
+28-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:36:5-38:36
+29        android:name="android.hardware.camera.flash"
+29-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:37:9-53
+30        android:required="false" />
+30-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:38:9-33
+31    <uses-feature
+31-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:39:5-41:36
+32        android:name="android.hardware.screen.landscape"
+32-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:40:9-57
+33        android:required="false" />
+33-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:41:9-33
+34    <uses-feature
+34-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:42:5-44:36
+35        android:name="android.hardware.wifi"
+35-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:43:9-45
+36        android:required="false" />
+36-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:44:9-33
+37
+38    <application
+38-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:9:4-47:19
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.3.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/a69d6fcd21e670073cd9cab171299398/core-1.3.0/AndroidManifest.xml:24:18-86
+40        android:icon="@mipmap/launcher_icon"
+40-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:12:9-45
+41        android:label="Triviazilla"
+41-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:11:9-36
+42        android:requestLegacyExternalStorage="true" >
+42-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:10:9-52
+43        <activity
+43-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:13:9-41:20
+44            android:name="com.example.trivia_app.MainActivity"
+44-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:14:13-41
+45            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+45-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:17:13-163
+46            android:hardwareAccelerated="true"
+46-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:18:13-47
+47            android:launchMode="singleTop"
+47-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:15:13-43
+48            android:theme="@style/LaunchTheme"
+48-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:16:13-47
+49            android:windowSoftInputMode="adjustResize" >
+49-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:19:13-55
+50
+51            <!--
+52                 Specifies an Android theme to apply to this Activity as soon as
+53                 the Android process has started. This theme is visible to the user
+54                 while the Flutter UI initializes. After that, this theme continues
+55                 to determine the Window background behind the Flutter UI.
+56            -->
+57            <meta-data
+57-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:24:13-27:17
+58                android:name="io.flutter.embedding.android.NormalTheme"
+58-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:25:15-70
+59                android:resource="@style/NormalTheme" />
+59-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:26:15-52
+60            <!--
+61                 Displays an Android View that continues showing the launch screen
+62                 Drawable until Flutter paints its first frame, then this splash
+63                 screen fades out. A splash screen is useful to avoid any visual
+64                 gap between the end of Android's launch screen and the painting of
+65                 Flutter's first frame.
+66            -->
+67            <meta-data
+67-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:33:13-36:17
+68                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+68-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:34:15-79
+69                android:resource="@drawable/launch_background" />
+69-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:35:15-61
+70
+71            <intent-filter>
+71-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:37:13-40:29
+72                <action android:name="android.intent.action.MAIN" />
+72-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:38:17-68
+72-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:38:25-66
+73
+74                <category android:name="android.intent.category.LAUNCHER" />
+74-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:39:17-76
+74-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:39:27-74
+75            </intent-filter>
+76        </activity>
+77        <!--
+78             Don't delete the meta-data below.
+79             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+80        -->
+81        <meta-data
+81-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:44:9-46:33
+82            android:name="flutterEmbedding"
+82-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:45:13-44
+83            android:value="2" />
+83-->/Users/mac/AndroidStudioProjects/trivia-app/android/app/src/main/AndroidManifest.xml:46:13-30
+84
+85        <activity
+85-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:47:9-53:63
+86            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+86-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:48:13-74
+87            android:clearTaskOnLaunch="true"
+87-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:49:13-45
+88            android:screenOrientation="sensorLandscape"
+88-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:50:13-56
+89            android:stateNotNeeded="true"
+89-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:51:13-42
+90            android:theme="@style/zxing_CaptureTheme"
+90-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:52:13-54
+91            android:windowSoftInputMode="stateAlwaysHidden" />
+91-->[com.journeyapps:zxing-android-embedded:4.1.0] /Users/mac/.gradle/caches/transforms-2/files-2.1/99b4de82b6f1f423096de085539cebb7/jetified-zxing-android-embedded-4.1.0/AndroidManifest.xml:53:13-60
+92    </application>
+93
+94</manifest>
