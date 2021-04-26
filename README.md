@@ -2,7 +2,7 @@
 
 Make and answer a quiz quick and easy with Triviazilla.
 
-Download the apk file  <a href="/assets/screenshots/question_answers.png" download>here</a>.
+Download the apk file  <a href="/triazilla-app.apk" download>here</a>.
 
 <img src="/assets/screenshots/onboarding.png" height="400"> <img src="/assets/screenshots/main-menu.png" height="400"> <img src="/assets/screenshots/answer_question.png" height="400"> <img src="/assets/screenshots/correct.png" height="400"> <img src="/assets/screenshots/wrong.png" height="400"> <img src="/assets/screenshots/quiz_settings.png" height="400"> <img src="/assets/screenshots/question_answers.png" height="400"> <img src="/assets/screenshots/quiz_review.png" height="400"> <img src="/assets/screenshots/create_quiz_final.png" height="400"> <img src="/assets/screenshots/scan_qr.png" height="400"> <img src="/assets/screenshots/read_qr.png" height="400"> <img src="/assets/screenshots/answer_question.png" height="400"> <img src="/assets/screenshots/answer_final.png" height="400"> <img src="/assets/screenshots/ready_to_answer.png" height="400">  
 
