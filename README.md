@@ -6,7 +6,8 @@ Make and answer a quiz quick and easy with Triviazilla.
 
 ### Create a Quiz
 
-1. Go to Create a Quiz
+1. Go to Create a Quiz 
+<img src="/assets/screenshots/onboarding.png" height="400"> 
 2. Set the quiz settings (title, category, diificulty, questions number)
 3. Fill in each question title and their answers. You can review the answers at the bottom. 
 4. Review your quiz (including you questions and their answers)
