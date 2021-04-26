@@ -2,6 +2,8 @@
 
 Make and answer a quiz quick and easy with Triviazilla.
 
+<img src="/assets/screenshots/onboarding.png" height="400"> <img src="/assets/screenshots/main-menu.png" height="400"> 
+
 ### Create a Quiz
 
 1. Go to Create a Quiz
