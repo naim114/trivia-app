@@ -82,7 +82,7 @@ class _QuizAnswerFrameState extends State<QuizAnswerFrame> {
       'False!!'
     ];
 
-    Map<String, bool> answeredQuestion = {};
+    // Map<String, bool> answeredQuestion = {};
     return PageView(
       controller: pageController,
       pageSnapping: false,
@@ -107,12 +107,8 @@ class _QuizAnswerFrameState extends State<QuizAnswerFrame> {
               if (bool) score++;
               print("score: $score");
 
-              answeredQuestion[aQuestion.entries.first.key] = bool;
+              // answeredQuestion[aQuestion.entries.first.key] = bool;
 
-              // pageController.nextPage(
-              //   duration: Duration(milliseconds: 777),
-              //   curve: Curves.bounceIn,
-              // );
               if (index + 1 == questionNum) {
                 print("Last index!");
 
@@ -124,7 +120,7 @@ class _QuizAnswerFrameState extends State<QuizAnswerFrame> {
                     builder: (BuildContext context) => QuizAnswerFinish(
                       questionNum: questionNum,
                       score: score,
-                      answeredQuestion: answeredQuestion,
+                      // answeredQuestion: answeredQuestion,
                     ),
                   ),
                 );

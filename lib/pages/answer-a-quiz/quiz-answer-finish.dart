@@ -7,17 +7,17 @@ import 'package:trivia_app/theme/theme.dart';
 
 class QuizAnswerFinish extends StatelessWidget {
   final int questionNum, score;
-  final Map<String, bool> answeredQuestion;
+  // final Map<String, bool> answeredQuestion;
   const QuizAnswerFinish({
     Key? key,
     required this.questionNum,
     required this.score,
-    required this.answeredQuestion,
+    // required this.answeredQuestion,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    print("answeredQuestion: $answeredQuestion");
+    // print("answeredQuestion: $answeredQuestion");
     Size size = MediaQuery.of(context).size;
 
     List<String> perfectGIF = [
