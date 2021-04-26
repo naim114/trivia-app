@@ -10,7 +10,7 @@ Make and answer a quiz quick and easy with Triviazilla.
 2. Set the quiz settings (title, category, diificulty, questions number)
 <img src="/assets/screenshots/quiz_settings.png" height="200"> 
 3. Fill in each question title and their answers. You can review the answers at the bottom. 
-<img src="/assets/screenshots/quiz_answers.png" height="200"> 
+<img src="/assets/screenshots/question_answers.png" height="200"> 
 4. Review your quiz (including you questions and their answers)
 <img src="/assets/screenshots/quiz_review.png" height="200"> 
 5. Submit your quiz and Triviazilla will generate a QR code for you. You can save it to your gallery to share it!
